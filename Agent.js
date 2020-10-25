@@ -1,5 +1,5 @@
 class Agent {
-  constructor(start, goal, radius = 4) {
+  constructor(start, goal, radius = 6) {
     this.position = createVector(start.position.x, start.position.y);
     this.velocity = createVector(0, 0);
     this.acceleration = createVector(0, 0);
@@ -68,7 +68,11 @@ class Agent {
   }
   render() {
     this.update();
-    fill(255, 204, 0);
+    if (this.isBest) {
+      fill(0, 255, 0);
+    } else {
+      fill(255, 204, 0);
+    }
     // console.log(this.position.x, this.position.y, this.radius);
     circle(this.position.x, this.position.y, this.radius);
     fill(255, 255, 255);

@@ -38,11 +38,13 @@ class Population {
     //   bestAgent.brain.instructions
     // );
     this.agents = [bestAgent];
+    bestAgent.isBest = false;
     for (let i = 1; i < this.numAgents; i++) {
       let newAgent = bestAgent.clone();
       newAgent.brain.mutate(MUTATION_RATE);
       this.agents.push(newAgent);
     }
+    bestAgent.isBest = true;
   }
   render() {
     let allDone = this.isAllDone();
