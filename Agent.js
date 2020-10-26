@@ -1,5 +1,5 @@
 class Agent {
-  constructor(start, goal, radius = 6) {
+  constructor(start, goal, radius = 10) {
     this.position = createVector(start.position.x, start.position.y);
     this.velocity = createVector(0, 0);
     this.acceleration = createVector(0, 0);

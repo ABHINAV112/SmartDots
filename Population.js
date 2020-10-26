@@ -57,7 +57,7 @@ class Population {
       return;
     }
 
-    for (let i = 0; i < this.numAgents; i++) {
+    for (let i = this.numAgents - 1; i >= 0; i--) {
       this.agents[i].render();
       if (this.agents[i].dead || this.agents[i].reachedGoal) {
         this.doneAgents += 1;
