@@ -28,15 +28,9 @@ class Population {
   createNewPopulation() {
     let bestAgentBrain = this.findBestAgent().brain.clone();
     // resetting everything other than brain to initial values
-    // console.log(bestAgentBrain.instructions);
     let bestAgent = new Agent(this.start, this.goal);
     bestAgent.brain = bestAgentBrain;
-    // console.log(
-    //   String(bestAgent.position),
-    //   String(bestAgent.velocity),
-    //   String(bestAgent.acceleration),
-    //   bestAgent.brain.instructions
-    // );
+
     this.agents = [bestAgent];
     bestAgent.isBest = false;
     for (let i = 1; i < this.numAgents; i++) {

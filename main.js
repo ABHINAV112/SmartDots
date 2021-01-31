@@ -9,7 +9,6 @@ let population;
 function setup() {
   createCanvas(BOARD_WIDTH, BOARD_HEIGHT);
   goal = new Goal(BOARD_WIDTH / 2, 10, 10);
-  goal.render();
   start = new Start(20, BOARD_HEIGHT - 20);
   population = new Population(POPULTION_SIZE, start, goal);
   noStroke();
